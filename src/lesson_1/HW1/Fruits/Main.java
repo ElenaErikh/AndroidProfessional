@@ -5,6 +5,12 @@ public class Main {
         Apple apple = new Apple();
         Orange orange = new Orange();
 
+        Box<Orange> boxWithOranges = new Box<>();
+        boxWithOranges.add(orange);
+        boxWithOranges.add(orange);
+        boxWithOranges.add(orange);
+        boxWithOranges.add(orange);
+
         Box<Apple> boxWithApples1 = new Box<>(apple, apple);
         Box<Apple> boxWithApples2 = new Box<>();
         boxWithApples1.add(apple);
@@ -12,11 +18,6 @@ public class Main {
         boxWithApples1.add(apple);
         System.out.println(apple.getWeightOneFruit());
 
-        Box<Orange> boxWithOranges = new Box<>();
-        boxWithOranges.add(orange);
-        boxWithOranges.add(orange);
-        boxWithOranges.add(orange);
-        boxWithOranges.add(orange);
 
         System.out.println(boxWithApples1.getWeight());
         System.out.println(boxWithApples2.getWeight());
